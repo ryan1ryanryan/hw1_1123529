@@ -33,11 +33,22 @@ void printQueue(queue<int> q) {
 }
 
 int main() {
+    int n, element;
     queue<int> q;
-    q.push(1);
-    q.push(2);
-    q.push(3);
-    q.push(4);
+
+    cout << "Enter the number of elements (even number): ";
+    cin >> n;
+
+    if (n % 2 != 0) {
+        cout << "Please enter an even number of elements." << endl;
+        return 1;
+    }
+
+    cout << "Enter the elements of the queue: ";
+    for (int i = 0; i < n; i++) {
+        cin >> element;
+        q.push(element);
+    }
 
     cout << "Original queue: ";
     printQueue(q);
