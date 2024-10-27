@@ -21,7 +21,17 @@ void printNGE(const vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {4, 5, 2, 25};
+    int n;
+    cout << "Enter the number of elements: ";
+    cin >> n;
+
+    vector<int> arr(n);
+    cout << "Enter the elements of the array: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+
     printNGE(arr);
+
     return 0;
 }
