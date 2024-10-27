@@ -33,10 +33,16 @@ void printStack(stack<int> s) {
 
 int main() {
     stack<int> s;
-    s.push(28);
-    s.push(29);
-    s.push(30);
-    s.push(31);
+    int n, element;
+
+    cout << "Enter the number of elements in the stack: ";
+    cin >> n;
+
+    cout << "Enter the elements of the stack: ";
+    for (int i = 0; i < n; i++) {
+        cin >> element;
+        s.push(element);
+    }
 
     cout << "Original stack: ";
     printStack(s);
